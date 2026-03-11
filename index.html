@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Swarm Playground v2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Neon Swarm Playground v2</h1>
+        <p>
+          Click or drag to spawn particles. Press <kbd>Space</kbd> to toggle gravity.
+          Works with mouse, touch, and stylus.
+        </p>
+      </header>
+
+      <section class="controls">
+        <label>
+          Mode
+          <select id="mode">
+            <option value="calm">Calm</option>
+            <option value="storm">Storm</option>
+            <option value="galaxy" selected>Galaxy</option>
+          </select>
+        </label>
+
+        <label>
+          Theme
+          <select id="theme"></select>
+        </label>
+
+        <label>
+          Spawn
+          <input id="spawnRate" type="range" min="1" max="60" value="14" />
+          <span id="spawnRateValue">14</span>
+        </label>
+
+        <label>
+          Drift
+          <input id="drift" type="range" min="0" max="100" value="35" />
+          <span id="driftValue">35</span>
+        </label>
+
+        <label>
+          Trail
+          <input id="trail" type="range" min="2" max="35" value="18" />
+          <span id="trailValue">18</span>
+        </label>
+
+        <button id="reset">Reset</button>
+      </section>
+
+      <canvas id="scene" width="1100" height="640" aria-label="Particle simulation"></canvas>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
